@@ -18,8 +18,8 @@ export function getImagesByQuery(query) {
     })
     .then(res => {
       return res.data.hits.map(image => ({
-        original: image.largeImageURL,
-        preview: image.webformatURL,
+        largeImageURL: image.largeImageURL,
+        webformatURL: image.webformatURL,
         tags: image.tags,
         likes: image.likes,
         views: image.views,

@@ -6,8 +6,8 @@ const loader = document.querySelector('.show-loader');
 let lightbox = null;
 
 function imageTamplate({
-  original,
-  preview,
+  largeImageURL,
+  webformatURL,
   tags,
   likes,
   views,
@@ -15,10 +15,10 @@ function imageTamplate({
   downloads,
 }) {
   return `<li class="gallery-item">
-  <a class="gallery-link" href="${original}">
+  <a class="gallery-link" href="${largeImageURL}">
     <img
       class="gallery-image"
-      src="${preview}"
+      src="${webformatURL}"
       alt="${tags}"
     />
   </a>
